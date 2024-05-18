@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>new Message</h1>
+
+    <form action="http://localhost:8484/app/new" method="POST">
+      <input type="text" name="from" id="" placeholder="from" />
+      <br /><br />
+      <input type="text" name="to" id="" placeholder="to" /><br /><br />
+      <textarea
+        name="msg"
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="Your Message Here"
+      ></textarea
+      ><br /><br />
+      <input type="submit" value="send" />
+    </form>
+  </body>
+</html>

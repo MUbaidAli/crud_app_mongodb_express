@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whatsapp</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Whatsapp</h1>
+    <button><a href="http://localhost:8484/app/new">New Chat</a></button>
+    <div class="flex">
+      <%for(let item of data) {%>
+      <div>
+        <p>from: <%= item.from %></p>
+        <p>to: <%= item.to %></p>
+        <p>message: <%= item.msg %></p>
+        <p>date : <%=item.date.toLocaleString()%></p>
+        <div class="btn-space">
+          <a href="http://localhost:8484/app/edit/<%=item._id%>">Edit</a>
+          <form
+            action="http://localhost:8484/app/<%=item._id%>?_method=DELETE"
+            method="POST"
+          >
+            <input type="submit" value="Delete" />
+          </form>
+          <!-- <button>Delete</button> -->
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </body>
+</html>

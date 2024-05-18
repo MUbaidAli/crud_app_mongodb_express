@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Edit</h1>
+    <p>messages is sent to : <%=data.to%> from : <%=data.from%></p>
+
+    <form
+      action="http://localhost:8484/app/edit/<%=data._id%>?_method=PATCH"
+      method="POST"
+    >
+      <textarea name="msg" id="" cols="30" rows="10">
+            <%=data.msg%>
+        </textarea
+      >
+      <input type="submit" value="edit" />
+    </form>
+  </body>
+</html>
